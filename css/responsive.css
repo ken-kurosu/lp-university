@@ -177,6 +177,18 @@ img.sp-only {
   padding: var(--spacing-sm);
 }
 
+.problem__summary p {
+  font-size: var(--font-size-base);
+}
+
+.problem__voice-intro {
+  font-size: var(--font-size-base);
+}
+
+.problem__voice-outro {
+  font-size: var(--font-size-base);
+}
+
 .problem__conclusion {
   font-size: var(--font-size-base);
   padding: 0;
@@ -503,8 +515,20 @@ img.sp-only {
     font-size: 1.2rem;
   }
 
+  .problem__summary p {
+    font-size: var(--font-size-xl);
+  }
+
+  .problem__voice-intro {
+    font-size: var(--font-size-xl);
+  }
+
+  .problem__voice-outro {
+    font-size: var(--font-size-xl);
+  }
+
   .problem__conclusion {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
   }
 
   /* Solution */

@@ -460,8 +460,15 @@
   text-align: left;
 }
 
+.problem__summary p {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
 .problem__voice-intro {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -511,12 +518,12 @@
 }
 
 .problem__voice-outro {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-md);
 }
 
 .problem__conclusion {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   margin-top: var(--spacing-md);
   line-height: var(--line-height-relaxed);
   text-align: left;
