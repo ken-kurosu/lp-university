@@ -152,7 +152,8 @@ img.sp-only {
 }
 
 .problem-heading-image {
-  width: 280px;
+  height: 60px;
+  width: auto;
   margin-left: -4px;
 }
 
@@ -385,7 +386,8 @@ img.sp-only {
   }
 
   .problem-heading-image {
-    width: 240px;
+    height: 50px;
+    width: auto;
   }
 
   .problem__voice-list li {
