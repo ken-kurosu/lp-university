@@ -53,20 +53,27 @@ img.sp-only {
 /* ---- Hero Section ---- */
 .hero__image-container {
   min-height: auto;
-  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__text-overlay--sp {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   width: 88%;
+  padding: var(--spacing-lg) 0;
 }
 
 .hero__placeholder {
@@ -357,10 +364,6 @@ img.sp-only {
     font-size: var(--font-size-lg);
   }
 
-  .hero__image-container {
-    aspect-ratio: 9 / 14;
-  }
-
   .hero__text-overlay--sp {
     width: 92%;
   }
@@ -445,7 +448,7 @@ img.sp-only {
 
   /* Hero */
   .hero__image-container {
-    aspect-ratio: auto;
+    display: block;
   }
 
   .hero__image {
