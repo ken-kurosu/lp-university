@@ -467,8 +467,29 @@
 
 .problem__voice-list {
   list-style: none;
-  margin: var(--spacing-sm) 0;
-  padding-left: 0;
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md) 0;
+  position: relative;
+  border-top: 1px solid rgba(30, 64, 175, 0.2);
+  border-bottom: 1px solid rgba(30, 64, 175, 0.2);
+}
+
+.problem__voice-list::before,
+.problem__voice-list::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(30, 64, 175, 0.35) 20%, rgba(30, 64, 175, 0.35) 80%, transparent 100%);
+}
+
+.problem__voice-list::before {
+  top: -1px;
+}
+
+.problem__voice-list::after {
+  bottom: -1px;
 }
 
 .problem__voice-list li {
