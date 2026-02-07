@@ -72,8 +72,8 @@ img.sp-only {
   top: auto;
   left: auto;
   transform: none;
-  width: 88%;
-  padding: var(--spacing-lg) 0;
+  width: 96%;
+  padding: var(--spacing-md) 0;
 }
 
 .hero__placeholder {
@@ -365,7 +365,7 @@ img.sp-only {
   }
 
   .hero__text-overlay--sp {
-    width: 92%;
+    width: 96%;
   }
 
   .intro-text__highlight {
