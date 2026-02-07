@@ -93,8 +93,8 @@
   --font-size-4xl: 2.5rem;    /* 40px */
   --font-size-5xl: 3rem;      /* 48px */
 
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-black: 900;
