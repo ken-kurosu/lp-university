@@ -638,8 +638,8 @@
 .floating-cta .btn-cta-primary {
   width: 90%;
   max-width: 600px;
-  padding: var(--spacing-md) var(--spacing-2xl);
-  font-size: var(--font-size-xl);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-2xl);
   box-shadow: 0 6px 24px rgba(6, 199, 85, 0.5);
   animation: floating-wiggle 3s ease-in-out infinite;
 }
