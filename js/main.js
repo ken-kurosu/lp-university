@@ -142,37 +142,8 @@
   // Parallax Effect (Disabled for Image-only Hero)
   // ========================================
   function initParallax() {
-    if (prefersReducedMotion()) return;
-
-    const parallaxSections = document.querySelectorAll('.section--parallax, .cta-section--parallax');
-    if (!parallaxSections.length) return;
-
-    function updateParallax() {
-      parallaxSections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // セクションが画面内にある時のみ処理
-        if (rect.bottom < 0 || rect.top > windowHeight) return;
-
-        const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        const translateY = (scrollProgress - 0.5) * rect.height * CONFIG.parallaxSpeed * 0.5;
-
-        const bg = section.querySelector(':before') || section;
-        section.style.setProperty('--parallax-y', `${translateY}px`);
-      });
-      requestAnimationFrame(updateParallax);
-    }
-
-    // CSS変数でtransformを制御
-    parallaxSections.forEach(section => {
-      const before = window.getComputedStyle(section, '::before');
-      if (before.content !== 'none') {
-        section.classList.add('parallax-active');
-      }
-    });
-
-    requestAnimationFrame(updateParallax);
+    // CSS clip-path + position: fixed で実現（JS不要）
+    return;
   }
 
   // ========================================
