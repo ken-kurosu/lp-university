@@ -53,6 +53,16 @@ img.sp-only {
 /* ---- Hero Section ---- */
 .hero__image-container {
   min-height: auto;
+  aspect-ratio: 3 / 4;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero__text-overlay--sp {
@@ -347,6 +357,10 @@ img.sp-only {
     font-size: var(--font-size-lg);
   }
 
+  .hero__image-container {
+    aspect-ratio: 9 / 14;
+  }
+
   .hero__text-overlay--sp {
     width: 92%;
   }
@@ -430,6 +444,16 @@ img.sp-only {
   }
 
   /* Hero */
+  .hero__image-container {
+    aspect-ratio: auto;
+  }
+
+  .hero__image {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
   .hero__placeholder {
     min-height: 50vh;
   }
