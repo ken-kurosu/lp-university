@@ -103,8 +103,8 @@
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.7;
 
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.02em;
+  --letter-spacing-normal: -0.02em;
+  --letter-spacing-wide: 0;
 
   /* ========================================
      Layout
