@@ -190,7 +190,7 @@
 
 .comparison__box--negative {
   background-color: var(--color-gray-light);
-  border: 2px solid var(--color-gray);
+  border: none;
 }
 
 .comparison__box--image {
@@ -208,7 +208,7 @@
 
 .comparison__box--positive {
   background-color: var(--color-positive-light);
-  border: 2px solid var(--color-blue-positive);
+  border: none;
 }
 
 .comparison__icon {
