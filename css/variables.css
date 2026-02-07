@@ -1,0 +1,152 @@
+/* ==========================================================================
+   CSS Variables - 産学連携LP
+   研究施設・クリニックイメージ / 白 × 高級感のある青
+   ========================================================================== */
+
+:root {
+  /* ========================================
+     Primary Colors (高級感のある青)
+     ======================================== */
+  --color-navy: #1a3a5c;
+  --color-navy-dark: #0d2840;
+  --color-navy-light: #2a5080;
+
+  /* ========================================
+     Blue Tones (研究施設・清潔感)
+     ======================================== */
+  --color-light-blue: #f0f7fc;
+  --color-light-blue-accent: #d4e9f7;
+  --color-blue-positive: #2563eb;
+  --color-blue-bright: #3b82f6;
+  --color-blue-premium: #1e40af;
+  --color-blue-deep: #1e3a8a;
+
+  /* ========================================
+     CTA Colors (LINE Green)
+     ======================================== */
+  --color-cta-green: #06c755;
+  --color-cta-green-hover: #05b34c;
+  --color-cta-green-active: #049a42;
+  --color-cta-bg-black: #0d2840;
+
+  /* ========================================
+     Accent Colors (研究施設・クリーンなイメージ)
+     ======================================== */
+  --color-yellow-light: #f8fafc;
+  --color-yellow-gradient-start: #ffffff;
+  --color-yellow-gradient-end: #f0f7fc;
+  --color-gold: #1e40af;
+
+  /* ========================================
+     Neutral Colors
+     ======================================== */
+  --color-white: #ffffff;
+  --color-gray-lightest: #fafafa;
+  --color-gray-light: #f5f5f5;
+  --color-gray: #e0e0e0;
+  --color-gray-medium: #999999;
+  --color-gray-dark: #666666;
+  --color-black: #1a1a1a;
+
+  /* ========================================
+     Semantic Colors
+     ======================================== */
+  --color-negative: #dc3545;
+  --color-negative-light: #fff0f0;
+  --color-positive: #0077cc;
+  --color-positive-light: #e8f4fc;
+
+  /* ========================================
+     Text Colors
+     ======================================== */
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-text-inverse: #ffffff;
+
+  /* ========================================
+     Spacing Scale
+     ======================================== */
+  --spacing-xxs: 0.25rem;   /* 4px */
+  --spacing-xs: 0.5rem;     /* 8px */
+  --spacing-sm: 0.75rem;    /* 12px */
+  --spacing-md: 1rem;       /* 16px */
+  --spacing-lg: 1.5rem;     /* 24px */
+  --spacing-xl: 2rem;       /* 32px */
+  --spacing-2xl: 3rem;      /* 48px */
+  --spacing-3xl: 4rem;      /* 64px */
+
+  /* ========================================
+     Typography
+     ======================================== */
+  --font-family-base: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-family-mincho: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.375rem;   /* 22px */
+  --font-size-2xl: 1.625rem;  /* 26px */
+  --font-size-3xl: 2rem;      /* 32px */
+  --font-size-4xl: 2.5rem;    /* 40px */
+  --font-size-5xl: 3rem;      /* 48px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.4;
+  --line-height-normal: 1.7;
+  --line-height-relaxed: 2.0;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+
+  /* ========================================
+     Layout
+     ======================================== */
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+  --section-padding-y: 3rem;
+
+  /* ========================================
+     Border Radius
+     ======================================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     Shadows
+     ======================================== */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.2);
+  --shadow-cta: 0 4px 20px rgba(6, 199, 85, 0.4);
+  --shadow-cta-blue: 0 4px 20px rgba(30, 64, 175, 0.4);
+
+  /* ========================================
+     Transitions
+     ======================================== */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ========================================
+     Z-index Scale
+     ======================================== */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+}

@@ -1,0 +1,697 @@
+/* ==========================================================================
+   Sections - 産学連携LP
+   ========================================================================== */
+
+/* ========================================
+   Hero Section (Image Only - 画像のみ)
+   研究施設・清潔感のあるデザイン
+   ======================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.hero__image-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero__text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 1400px;
+  height: auto;
+  z-index: 10;
+}
+
+/* 画像がない場合のプレースホルダー */
+.hero__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, var(--color-white) 50%, var(--color-light-blue-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero__placeholder-active .hero__placeholder {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero__placeholder-content {
+  text-align: center;
+  color: var(--color-navy);
+}
+
+.hero__placeholder-content svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.4;
+}
+
+.hero__placeholder-content p {
+  font-size: var(--font-size-lg);
+  color: var(--color-navy);
+  opacity: 0.6;
+  margin: 0;
+}
+
+.hero__placeholder-content small {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-medium);
+}
+
+/* 画像がない場合のデフォルト表示（JS無効時） */
+.hero__image-container:not(.hero__placeholder-active) .hero__placeholder {
+  display: none;
+}
+
+/* 画像読み込みエラー時に表示 */
+.hero__image-container.hero__placeholder-active .hero__image {
+  display: none;
+}
+
+.hero__image-container.hero__placeholder-active .hero__placeholder {
+  opacity: 1;
+  position: relative;
+}
+
+/* ========================================
+   Hero CTA Section (ヒーロー直下)
+   高級感のある青グラデーション
+   ======================================== */
+.hero-cta-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-blue-premium) 50%, var(--color-blue-deep) 100%);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cta-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cta-section .hero-cta-button__image {
+  height: 55px;
+  width: auto;
+}
+
+.hero-cta-button {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: cta-attention 2s ease-in-out infinite;
+}
+
+.hero-cta-button:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: brightness(1.1);
+}
+
+.hero-cta-button__image {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 30px rgba(6, 199, 85, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-cta-button:hover .hero-cta-button__image {
+  box-shadow: 0 12px 40px rgba(6, 199, 85, 0.6);
+}
+
+/* CTAボタン注目アニメーション */
+@keyframes cta-attention {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    transform: scale(1.02) translateY(-3px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.02) translateY(-3px);
+  }
+}
+
+/* パルス光エフェクト */
+.hero-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(6, 199, 85, 0.3) 0%, transparent 70%);
+  border-radius: var(--radius-lg);
+  animation: pulse-glow 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* ========================================
+   Intro Section (導入セクション)
+   ======================================== */
+.intro-section {
+  background-image: url('../assets/images/bg-intro-section.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-top: -40px;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.intro-heading-image {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.intro-services-image {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--spacing-md) auto 0;
+}
+
+.intro-text {
+  width: 550px;
+  max-width: 100%;
+  margin: var(--spacing-lg) auto 0;
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.intro-text__emphasis {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-blue-premium);
+  font-size: 1.2em;
+}
+
+.intro-text__highlight {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+}
+
+.intro-lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--spacing-lg);
+}
+
+/* ========================================
+   Scroll Indicator
+   ======================================== */
+.scroll-indicator-section {
+  background: transparent;
+  padding: var(--spacing-sm) 0;
+  text-align: center;
+}
+
+.scroll-indicator {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-navy);
+  animation: bounce-simple 2s infinite;
+}
+
+.scroll-indicator span {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.scroll-indicator__line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--color-navy) 0%, transparent 100%);
+}
+
+@keyframes bounce-simple {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* ========================================
+   Section with Parallax Background
+   背景固定効果
+   ======================================== */
+.section--parallax {
+  position: relative;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(240, 247, 252, 0.45) 100%),
+    url('../assets/images/bg-parallax.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* iOSでのbackground-attachment: fixed対応 */
+@supports (-webkit-touch-callout: none) {
+  .section--parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* ========================================
+   Speech Bubble (吹き出し風コンテナ)
+   ======================================== */
+.speech-bubble {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg) var(--spacing-md);
+  box-shadow: var(--shadow-xl);
+  max-width: 800px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.speech-bubble .section-heading {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* 吹き出し - 左寄せ、口は左下 */
+.speech-bubble--left {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+  padding-left: var(--spacing-lg);
+}
+
+.speech-bubble--left::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--color-white);
+}
+
+/* 吹き出し - 右寄せ、口は右下 */
+.speech-bubble--right {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: left;
+  padding-left: var(--spacing-lg);
+}
+
+.speech-bubble--right::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--color-white);
+}
+
+.speech-bubble--right .testimonial {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+/* ========================================
+   Problem Section (課題提起)
+   ======================================== */
+#problem {
+  padding: var(--spacing-2xl) 0;
+}
+
+.problem-heading-image {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 var(--spacing-lg);
+  margin-left: -8px;
+}
+
+.testimonial-heading-image {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 var(--spacing-md);
+  margin-left: -6px;
+}
+
+.problem__content {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.problem__lead {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.problem__highlight {
+  font-size: var(--font-size-lg);
+  /* 研究施設風：淡いブルーの背景 */
+  background-color: var(--color-light-blue);
+  border-left: 4px solid var(--color-blue-positive);
+  padding: var(--spacing-md);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: var(--spacing-lg) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.problem__summary {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.problem__voice-intro {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.problem__voice-list {
+  list-style: none;
+  margin: var(--spacing-sm) 0;
+  padding-left: 0;
+}
+
+.problem__voice-list li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.2rem;
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-bold);
+  color: #000;
+}
+
+.problem__voice-list li::before {
+  content: '☑';
+  position: absolute;
+  left: 0;
+  color: var(--color-blue-premium);
+  font-weight: var(--font-weight-bold);
+}
+
+.problem__voice-outro {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+}
+
+.problem__conclusion {
+  font-size: var(--font-size-lg);
+  margin-top: var(--spacing-md);
+  line-height: var(--line-height-relaxed);
+  text-align: left;
+}
+
+/* ========================================
+   Solution Section (ソリューション)
+   ======================================== */
+#solution {
+  padding: var(--spacing-2xl) 0;
+}
+
+.solution__content {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.solution__content p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.solution__highlight {
+  position: relative;
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.solution__highlight-badge {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  display: inline-block;
+  padding: 4px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #2d4ea3);
+  color: #fff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(26, 42, 108, 0.3);
+}
+
+.solution__highlight p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-sm);
+}
+
+.solution__highlight p:last-child {
+  margin-bottom: 0;
+}
+
+.solution__cta-text {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-navy-dark);
+  margin-top: var(--spacing-xl);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ========================================
+   Benefits Section (メリット)
+   ======================================== */
+#benefits {
+  padding: var(--spacing-2xl) 0;
+}
+
+/* ========================================
+   Final CTA Section
+   ======================================== */
+.final-cta {
+  padding: var(--spacing-2xl) 0;
+}
+
+/* ========================================
+   Background Patterns & Decorations
+   ======================================== */
+.bg-light-blue {
+  position: relative;
+}
+
+.bg-light-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(6, 199, 85, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(26, 39, 68, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.bg-yellow-gradient {
+  position: relative;
+}
+
+.bg-yellow-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  /* 研究施設風：青のアクセント */
+  background: radial-gradient(circle, rgba(30, 64, 175, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ========================================
+   Urgency CTA Section (限定訴求)
+   ======================================== */
+.urgency-cta {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-blue-deep) 100%);
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.urgency-cta__warning {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: #f87171;
+  margin-bottom: var(--spacing-md);
+}
+
+.urgency-cta__message {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.urgency-cta__button {
+  margin-top: var(--spacing-md);
+}
+
+.urgency-cta__button .hero-cta-button__image {
+  height: 55px;
+  width: auto;
+}
+
+/* ========================================
+   Section Dividers
+   ======================================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-gray) 50%,
+    transparent 100%
+  );
+  margin: 0;
+  border: none;
+}
+
+/* ========================================
+   Floating Elements Animation
+   ======================================== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ========================================
+   Gradient Text
+   ======================================== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-cta-green) 0%, var(--color-blue-positive) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   Highlight Box
+   ======================================== */
+.highlight-box {
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light-blue) 100%);
+  border-left: 4px solid var(--color-cta-green);
+  padding: var(--spacing-lg);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: var(--spacing-lg) 0;
+}
+
+/* ========================================
+   Image Placeholder (for demo)
+   ======================================== */
+.image-placeholder {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  min-height: 300px;
+}
