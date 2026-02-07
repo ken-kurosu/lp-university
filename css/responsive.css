@@ -72,8 +72,8 @@ img.sp-only {
   top: auto;
   left: auto;
   transform: none;
-  width: 96%;
-  padding: var(--spacing-md) 0;
+  width: 100%;
+  padding: var(--spacing-sm) 0;
 }
 
 .hero__placeholder {
