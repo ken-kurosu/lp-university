@@ -419,7 +419,6 @@
   max-width: 100%;
   display: block;
   margin: 0 0 var(--spacing-lg);
-  margin-left: -8px;
 }
 
 .testimonial-heading-image {
@@ -428,7 +427,6 @@
   height: auto;
   display: block;
   margin: 0 0 var(--spacing-md);
-  margin-left: -6px;
 }
 
 .problem__content {
