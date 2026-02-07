@@ -536,6 +536,36 @@
   padding: var(--spacing-2xl) 0;
 }
 
+#solution .section-heading {
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+#solution .section-heading::before,
+#solution .section-heading::after {
+  content: '';
+  display: block;
+  width: 60%;
+  max-width: 500px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(30, 64, 175, 0.15) 15%,
+    rgba(30, 64, 175, 0.5) 50%,
+    rgba(30, 64, 175, 0.15) 85%,
+    transparent 100%
+  );
+}
+
+#solution .section-heading::before {
+  margin-bottom: var(--spacing-lg);
+}
+
+#solution .section-heading::after {
+  margin-top: var(--spacing-lg);
+}
+
 .solution__content {
   max-width: 800px;
   margin: 0 auto var(--spacing-lg);
