@@ -152,9 +152,9 @@ img.sp-only {
 }
 
 .problem-heading-image {
-  height: 60px;
-  width: auto;
-  margin-left: -4px;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
 }
 
 .testimonial-heading-image {
@@ -386,8 +386,8 @@ img.sp-only {
   }
 
   .problem-heading-image {
-    height: 50px;
-    width: auto;
+    width: 90%;
+    height: auto;
   }
 
   .problem__voice-list li {
