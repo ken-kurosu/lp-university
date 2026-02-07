@@ -509,6 +509,11 @@ img.sp-only {
     padding-left: var(--spacing-lg);
   }
 
+  .problem-heading-image {
+    height: 50px;
+    width: auto;
+  }
+
   .problem__lead {
     font-size: var(--font-size-xl);
   }
