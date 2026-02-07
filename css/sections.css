@@ -36,6 +36,16 @@
   z-index: 10;
 }
 
+.hero__text-overlay--sp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 88%;
+  height: auto;
+  z-index: 10;
+}
+
 /* 画像がない場合のプレースホルダー */
 .hero__placeholder {
   position: absolute;

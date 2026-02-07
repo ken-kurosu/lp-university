@@ -9,7 +9,11 @@
 
 /* Show/Hide utilities */
 .sp-only {
-  display: inline;
+  display: block;
+}
+
+img.sp-only {
+  display: block;
 }
 
 .pc-only {
@@ -18,61 +22,137 @@
 
 /* Container */
 .container {
-  padding-left: var(--spacing-sm);
-  padding-right: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Section padding */
+.section {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+#problem,
+#solution,
+#benefits,
+.final-cta {
+  padding: var(--spacing-xl) 0;
 }
 
 /* Typography adjustments */
 .section-heading {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .badge-highlight {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   padding: var(--spacing-xxs) var(--spacing-xs);
 }
 
-/* Hero Section (Image Only) */
+/* ---- Hero Section ---- */
 .hero__image-container {
   min-height: auto;
+}
+
+.hero__text-overlay--sp {
+  width: 88%;
 }
 
 .hero__placeholder {
   min-height: 40vh;
 }
 
-/* Hero CTA Section - モバイル */
+/* ---- Hero CTA Section ---- */
+.hero-cta-section {
+  height: 55px;
+}
+
 .hero-cta-section .hero-cta-button__image {
-  height: 45px;
+  height: 38px;
 }
 
+/* ---- Scroll Indicator ---- */
 .scroll-indicator-section {
-  padding: var(--spacing-md) 0 var(--spacing-lg);
+  padding: var(--spacing-sm) 0 var(--spacing-md);
 }
 
+/* ---- Intro Section ---- */
+.intro-section {
+  margin-top: -20px;
+}
 
-/* CTA Buttons */
-.btn-cta-primary {
+.intro-heading-image {
   width: 100%;
-  max-width: 320px;
+}
+
+.intro-services-image {
+  width: 100%;
+}
+
+.intro-text {
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.intro-text p {
   font-size: var(--font-size-base);
-  padding: var(--spacing-sm) var(--spacing-md);
 }
 
-.btn-cta-primary--large {
+.intro-text__highlight {
   font-size: var(--font-size-lg);
-  padding: var(--spacing-md) var(--spacing-lg);
 }
 
-.btn-cta-primary--xlarge {
-  font-size: var(--font-size-xl);
-  padding: var(--spacing-md) var(--spacing-lg);
+/* ---- Problem Section (吹き出し) ---- */
+.speech-bubble {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-lg);
 }
 
-/* Problem Section */
+.speech-bubble--left {
+  padding-left: var(--spacing-md);
+}
+
+.speech-bubble--right {
+  padding-left: var(--spacing-md);
+}
+
+.speech-bubble--left::after {
+  left: 24px;
+  bottom: -16px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid var(--color-white);
+}
+
+.speech-bubble--right::after {
+  right: 24px;
+  bottom: -16px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid var(--color-white);
+}
+
+.problem-heading-image {
+  width: 280px;
+  margin-left: -4px;
+}
+
+.testimonial-heading-image {
+  width: 100%;
+  margin-left: -3px;
+}
+
 .problem__lead {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.problem__voice-list li {
+  font-size: var(--font-size-base);
+  padding-left: 1.5em;
+  margin-bottom: var(--spacing-xs);
 }
 
 .problem__highlight {
@@ -81,19 +161,50 @@
 }
 
 .problem__conclusion {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   padding: 0;
   text-align: left;
 }
 
-/* Comparison Box */
+/* ---- Solution Section ---- */
+.section-heading__img {
+  max-width: 100%;
+}
+
+.solution__content p {
+  font-size: var(--font-size-base);
+}
+
+.solution__highlight {
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) auto;
+}
+
+.solution__highlight p {
+  font-size: var(--font-size-base);
+}
+
+.solution__highlight-badge {
+  top: -12px;
+  left: 16px;
+  font-size: 12px;
+  padding: 3px 14px;
+}
+
+.solution__cta-text {
+  font-size: var(--font-size-base);
+}
+
+/* ---- Comparison Box ---- */
 .comparison {
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
 }
 
 .comparison__vs {
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-lg);
 }
 
 .comparison__box {
@@ -104,7 +215,7 @@
   font-size: var(--font-size-lg);
 }
 
-/* Benefits Grid */
+/* ---- Benefits Grid ---- */
 .benefits__grid {
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
@@ -115,15 +226,58 @@
 }
 
 .benefit-card__icon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
 }
 
 .benefit-card__title {
   font-size: var(--font-size-base);
 }
 
-/* Final CTA */
+/* ---- Urgency CTA ---- */
+.urgency-cta {
+  padding: var(--spacing-xl) 0;
+}
+
+.urgency-cta__warning {
+  font-size: var(--font-size-lg);
+}
+
+.urgency-cta__message {
+  font-size: var(--font-size-base);
+}
+
+.urgency-cta__button .hero-cta-button__image {
+  height: 45px;
+}
+
+/* ---- CTA Buttons ---- */
+.btn-cta-primary {
+  width: 100%;
+  max-width: 320px;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.btn-cta-primary--large {
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.btn-cta-primary--xlarge {
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+/* ---- Floating CTA ---- */
+.floating-cta .btn-cta-primary {
+  width: 92%;
+  max-width: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+}
+
+/* ---- Final CTA ---- */
 .final-cta__heading {
   font-size: var(--font-size-xl);
 }
@@ -138,8 +292,8 @@
 }
 
 .final-cta__feature-icon {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
 }
 
 .final-cta__feature-icon svg {
@@ -147,7 +301,11 @@
   height: 28px;
 }
 
-/* Footer */
+/* ---- Footer ---- */
+.footer {
+  padding: var(--spacing-lg) 0 calc(var(--spacing-lg) + 70px);
+}
+
 .footer__content {
   flex-direction: column;
   gap: var(--spacing-sm);
@@ -160,107 +318,96 @@
 }
 
 .footer__top-btn {
-  bottom: var(--spacing-md);
+  bottom: 80px;
   right: var(--spacing-md);
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
 }
 
-/* Section padding */
-.section {
-  padding-top: var(--spacing-2xl);
-  padding-bottom: var(--spacing-2xl);
-}
-
-#problem,
-#solution,
-#benefits,
-.final-cta {
-  padding: var(--spacing-2xl) 0;
-}
-
-/* Testimonial */
+/* ---- Testimonial ---- */
 .testimonial {
   padding: var(--spacing-md);
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-md) 0;
 }
 
 .testimonial__text {
   font-size: var(--font-size-base);
 }
 
-/* Solution section */
-.solution__content p {
-  font-size: var(--font-size-base);
-}
+/* ========================================
+   Small Mobile (375px以下 - iPhone SE等)
+   ======================================== */
+@media (max-width: 375px) {
+  .container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
 
-.solution__cta-text {
-  font-size: var(--font-size-lg);
+  .section-heading {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero__text-overlay--sp {
+    width: 92%;
+  }
+
+  .intro-text__highlight {
+    font-size: var(--font-size-base);
+  }
+
+  .problem-heading-image {
+    width: 240px;
+  }
+
+  .problem__voice-list li {
+    font-size: var(--font-size-sm);
+  }
+
+  .benefit-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .solution__highlight-badge {
+    font-size: 11px;
+    padding: 2px 10px;
+  }
+
+  .floating-cta .btn-cta-primary {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .urgency-cta__warning {
+    font-size: var(--font-size-base);
+  }
 }
 
 /* ========================================
    Tablet (768px - 1023px)
    ======================================== */
 @media (min-width: 768px) {
+  /* Show/Hide */
+  .sp-only {
+    display: none;
+  }
+
+  img.sp-only {
+    display: none;
+  }
+
+  .pc-only {
+    display: inline;
+  }
+
+  img.pc-only {
+    display: block;
+  }
+
   /* Container */
   .container {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
-  }
-
-  /* Typography */
-  .section-heading {
-    font-size: var(--font-size-3xl);
-    margin-bottom: var(--spacing-2xl);
-  }
-
-  /* Hero (Image Only) */
-  .hero__placeholder {
-    min-height: 50vh;
-  }
-
-  /* Hero CTA Section */
-  .hero-cta-section .hero-cta-button__image {
-    height: 55px;
-  }
-
-
-  /* CTA Buttons */
-  .btn-cta-primary {
-    width: auto;
-    max-width: none;
-  }
-
-  /* Comparison Box */
-  .comparison {
-    flex-direction: row;
-    gap: var(--spacing-lg);
-  }
-
-  .comparison__vs {
-    padding: 0;
-  }
-
-  /* Benefits Grid */
-  .benefits__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Final CTA */
-  .final-cta__features {
-    flex-wrap: nowrap;
-    gap: var(--spacing-lg);
-  }
-
-  .final-cta__feature {
-    flex: 1;
-  }
-
-  /* Footer */
-  .footer__nav {
-    flex-direction: row;
-    gap: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
   }
 
   /* Section padding */
@@ -275,37 +422,180 @@
   .final-cta {
     padding: var(--spacing-2xl) 0;
   }
+
+  /* Typography */
+  .section-heading {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  /* Hero */
+  .hero__placeholder {
+    min-height: 50vh;
+  }
+
+  .hero-cta-section {
+    height: 70px;
+  }
+
+  .hero-cta-section .hero-cta-button__image {
+    height: 55px;
+  }
+
+  /* Intro */
+  .intro-section {
+    margin-top: -40px;
+  }
+
+  .intro-text p {
+    font-size: var(--font-size-lg);
+  }
+
+  .intro-text__highlight {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Problem */
+  .speech-bubble {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .speech-bubble--left {
+    padding-left: var(--spacing-lg);
+  }
+
+  .speech-bubble--right {
+    padding-left: var(--spacing-lg);
+  }
+
+  .problem__lead {
+    font-size: var(--font-size-xl);
+  }
+
+  .problem__voice-list li {
+    font-size: 1.2rem;
+  }
+
+  .problem__conclusion {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Solution */
+  .solution__content p {
+    font-size: var(--font-size-lg);
+  }
+
+  .solution__highlight p {
+    font-size: var(--font-size-lg);
+  }
+
+  .solution__cta-text {
+    font-size: var(--font-size-lg);
+  }
+
+  /* CTA Buttons */
+  .btn-cta-primary {
+    width: auto;
+    max-width: none;
+  }
+
+  /* Comparison Box */
+  .comparison {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+  }
+
+  .comparison__vs {
+    padding: 0;
+  }
+
+  /* Benefits Grid */
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .benefit-card__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .benefit-card__title {
+    font-size: var(--font-size-base);
+  }
+
+  /* Urgency CTA */
+  .urgency-cta {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .urgency-cta__warning {
+    font-size: var(--font-size-xl);
+  }
+
+  .urgency-cta__message {
+    font-size: var(--font-size-lg);
+  }
+
+  .urgency-cta__button .hero-cta-button__image {
+    height: 55px;
+  }
+
+  /* Final CTA */
+  .final-cta__features {
+    flex-wrap: nowrap;
+    gap: var(--spacing-lg);
+  }
+
+  .final-cta__feature {
+    flex: 1;
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+
+  .footer__content {
+    flex-direction: row;
+  }
+
+  .footer__nav {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .footer__top-btn {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Floating CTA */
+  .floating-cta .btn-cta-primary {
+    width: 90%;
+    max-width: 600px;
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-md) var(--spacing-2xl);
+  }
 }
 
 /* ========================================
    Desktop (1024px and up)
    ======================================== */
 @media (min-width: 1024px) {
-  /* Show/Hide utilities */
-  .sp-only {
-    display: none;
-  }
-
-  .pc-only {
-    display: inline;
-  }
-
   /* Container */
   .container {
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
   }
 
-  /* Hero (Image Only) */
+  /* Hero */
   .hero__placeholder {
     min-height: 60vh;
   }
-
-  /* Hero CTA Section */
-  .hero-cta-section .hero-cta-button__image {
-    height: 55px;
-  }
-
 
   /* Benefits Grid */
   .benefits__grid {
@@ -443,7 +733,8 @@
 
   .cta-section,
   .btn-cta-primary,
-  .footer__top-btn {
+  .footer__top-btn,
+  .floating-cta {
     display: none;
   }
 
@@ -456,19 +747,6 @@
     box-shadow: none;
     border: 1px solid var(--color-gray);
   }
-}
-
-/* ========================================
-   Dark Mode Support (Optional)
-   ======================================== */
-@media (prefers-color-scheme: dark) {
-  /* Uncomment if dark mode is needed
-  :root {
-    --color-white: #1a1a1a;
-    --color-text-primary: #e0e0e0;
-    --color-text-secondary: #b0b0b0;
-  }
-  */
 }
 
 /* ========================================
