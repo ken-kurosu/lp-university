@@ -196,14 +196,15 @@
 .comparison__box--image {
   padding: 0;
   overflow: hidden;
+  background-color: transparent;
+  border-radius: 0;
 }
 
 .comparison__box-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  border-radius: inherit;
+  border-radius: 0;
 }
 
 .comparison__box--positive {
