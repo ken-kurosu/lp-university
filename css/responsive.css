@@ -241,6 +241,10 @@ img.sp-only {
   padding: var(--spacing-md);
 }
 
+.comparison__box--image {
+  padding: 0;
+}
+
 .comparison__title {
   font-size: var(--font-size-lg);
 }
