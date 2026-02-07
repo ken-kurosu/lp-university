@@ -189,7 +189,7 @@
 }
 
 .comparison__box--negative {
-  background-color: var(--color-gray-light);
+  background-color: transparent;
   border: none;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .comparison__box--positive {
-  background-color: var(--color-positive-light);
+  background-color: transparent;
   border: none;
 }
 
